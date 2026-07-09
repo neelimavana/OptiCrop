@@ -22,3 +22,25 @@ trained classifier that maps soil/climate inputs directly to a crop recommendati
 - **Dataset**: [Crop Recommendation Dataset](https://www.kaggle.com/datasets/chitrakumari25/smart-agricultural-production-optimizing-engine) — N, P, K, temperature, humidity, ph, rainfall → label (22 balanced crop classes, 100 samples each)
 
 ## Repository structure
+
+The OptiCrop repository is organized as follows:
+
+OptiCrop/
+├── app.py	← Main Flask application (routes, prediction logic)
+├── requirements.txt	← All Python dependencies
+├── README.md	← Setup instructions and project overview
+├── .gitignore
+├── data/
+│ └── Crop_recommendation.csv ← Training dataset (2,200 rows, 22 crops)
+├── model/
+│  ├── model.pkl	← Trained Random Forest classifier (99.55% accuracy)
+│  ├── scaler.pkl	← Fitted StandardScaler
+│  └── label_encoder.pkl	← LabelEncoder for crop name decoding
+├── notebooks/
+│ └── EDA_and_Model_Training.ipynb ← Full ML pipeline notebook
+├── templates/
+│  ├── home.html
+│ ├── about.html
+│  └── find_your_crop.html
+└── static/
+└── style.css
